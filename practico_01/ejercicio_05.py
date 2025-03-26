@@ -4,11 +4,14 @@ from typing import Iterable
 
 
 def multiplicar_basico(numeros: Iterable[float]) -> float:
-    """Toma un lista de números y devuelve el producto todos los númreos. Si
-    la lista está vacia debe devolver 0.
-
-    Restricciones: No usar bibliotecas auxiliares (Numpy, math, pandas).
-    """
+    if not numeros:
+        return 0
+    c = 1
+    for i in numeros:
+        c = c* i
+    return c
+    
+  
     pass # Completar
 
 
@@ -28,9 +31,9 @@ from functools import reduce
 
 
 def multiplicar_reduce(numeros: Iterable[float]) -> float:
-    """CHALLENGE OPCIONAL - Re-escribir utilizando reduce.
-    Referencia: https://docs.python.org/3.8/library/functools.html#functools.reduce
-    """
+    if not numeros:
+        return 0
+    reduce(lambda x, y: x*y,numeros)
     pass # Completar
 
 
