@@ -2,12 +2,7 @@
 
 
 def es_palindromo(palabra: str) -> bool:
-    """Toma un string y devuelve un booleano en base a si se lee igual al
-    derecho y al revés.
-
-    Restricción: No utilizar bucles - Usar Slices de listas.
-    Referencia: https://docs.python.org/3/tutorial/introduction.html#lists
-    """
+    return palabra == palabra[::-1]
     pass # Completar
 
 
@@ -22,12 +17,8 @@ assert es_palindromo("")
 
 
 def mitad(palabra: str) -> str:
-    """Toma un string y devuelve la mitad. Si la longitud es impar, redondear
-    hacia arriba.
-
-    Restricción: No utilizar bucles - Usar Slices de listas.
-    Referencia: https://docs.python.org/3/tutorial/introduction.html#lists
-    """
+    c = (len(palabra)+1)//2
+    return palabra[:c]
     pass # Completar
 
 
